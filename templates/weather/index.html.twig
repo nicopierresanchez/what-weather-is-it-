@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Votre météo
+	{% if data is defined %}
+		À
+		{{ data.country_name }}
+	{% endif %}!
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="title">
+			<h2>Bienvenue sur la page Météo</h2>
+		</div>
+		<div class="city_form">
+			{{ form_start(form) }}
+			<div>
+				<label for="cityNameInput" class="form-label">Ville</label>
+			</div>
+			<div>
+				{{ form_widget(form.city_name) }}
+			</div>
+			<div>
+				{{ form_errors(form.city_name) }}
+			</div>
+			<div>
+				{{ form_end(form) }}
+			</div>
+		</div>
+		{% if data is defined %}
+			<div class="container">
+				<div class="row">
+					<h1>À
+						{{ data.country_name }}
+					</h1>
+					<div class="date">
+						Le
+						{{ data.day }}
+						{{ data.date }}
+					</div>
+					<h2>
+						(lon. :
+						{{ data.lon }}, lat. :
+						{{ data.lat }})</h2>
+				</div>
+				<div class="informations">
+					<div class="weather">
+
+						<div class="description">
+							<div class="icon_img ">
+								<h1>{{ data.description }}</h1>
+								<img src={{ data.icon_img }}>
+							</div>
+						</div>
+					</div>
+					<div class="temperature">
+						<div class="temperature_title">
+							Température :
+						</div>
+						<div class="temperature_actually">
+							{{ data.temperature }}
+							°C
+						</div>
+						<div ="temperature_predict">
+							(min. :
+							{{ data.min }}, max. :
+							{{ data.max }})
+						</div>
+					</div>
+					<div class="atmosphere">
+						<div class="pressure">
+							Pression :
+							{{ data.pressure }}
+							hPa
+						</div>
+						<div class="humidity">
+							Humidité :
+							{{ data.humidity }}
+						</div>
+					</div>
+					<div class="wind">
+						<div class="wind_infos">
+							Vent :
+							{{ data.wind_speed }}
+						</div>
+						<div class="rose">
+							<div class="direction">N</div>
+							<div class="wind_direction">
+								O
+								<img src="/assets/images/direction_vent.png" style="transform: rotate({{ data.wind_deg }}deg);">
+								E
+							</div>
+							<div class="direction">S</div>
+						</div>
+					</div>
+					<div class="sun">
+						<div class="sunrise">
+							<img src="/assets/images/lever_soleil.png">
+							{{ data.sunrise | date('H:s', "Europe/Paris")}}
+						</div>
+						<div class="sunset">
+							<img src="/assets/images/coucher_soleil.png">
+							{{ data.sunset | date('H:s', "Europe/Paris")}}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% else %}
+		{% endif %}
+	{% endblock %}

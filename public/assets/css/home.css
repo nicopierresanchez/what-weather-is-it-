@@ -1,0 +1,177 @@
+body{
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+.container {
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-family: revert-layer;
+}
+
+.city_form form {
+    display: flex;
+    flex-direction: row;
+
+    align-items: baseline;
+    justify-content: space-around;
+    max-width: 340px;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.row {
+    text-align: center;
+}
+.row h1 {
+    font-size: inherit;
+}
+.row h2 {
+    font-size: inherit;
+    margin: 0.5rem;
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.icon_img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon_img img {
+    height: 6rem;
+}
+.temperature {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+}
+.temperature_title {
+    font-size: x-large;
+}
+.temperature_actually {
+    font-size: x-large;
+    margin: 1rem auto 1rem auto;
+}
+
+.pressure {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.humidity {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+
+.wind_direction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+}
+
+.wind_infos {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.wind_direction img {
+    width: 10rem;
+}
+
+.direction {
+    text-align: center;
+}
+
+.sunrise img,
+.sunset img {
+    width: 6rem;
+}
+
+.sunrise,
+.sunset {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        margin: auto;
+        
+    }
+
+    .temperature {
+        justify-content: space-around;
+        width: 49%;
+        box-shadow: 1px 1px 10px rgb(125, 186, 255);
+        height: 15rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        height: 11rem;
+    }
+    .weather {
+        box-shadow: 1px 1px 10px rgb(125, 186, 255);
+        width: 49%;
+        justify-content: center;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        height: 11rem;
+    }
+    .row{
+        margin: 0.5rem;
+    }
+    .row h1 {
+        font-size: 2rem;
+        margin: 0.5rem;
+    }
+    
+
+    .wind{
+        width: 49%;
+        box-shadow: 1px 1px 10px rgb(125, 186, 255);
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+    .sun {
+        width: 100%;
+        box-shadow: 1px 1px 10px rgb(125, 186, 255);
+        border-radius: 10px;
+    }
+
+    .informations {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 60%;
+        margin: auto;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+
+    .atmosphere {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 1px 1px 10px rgb(125, 186, 255);
+        width: 49%;
+        justify-content: center;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+}
