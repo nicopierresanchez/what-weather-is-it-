@@ -276,3 +276,13 @@ f89f45,127.0.0.1,GET,http://localhost:8000/weather/toulouse,1645437367,,200
 938828,127.0.0.1,GET,http://localhost:8000/weather/paris,1645438032,,200
 639e97,127.0.0.1,POST,http://localhost:8000/weather/paris,1645438041,,302
 19b5da,127.0.0.1,GET,http://localhost:8000/weather/montreux,1645438041,,200
+df2e79,127.0.0.1,GET,http://127.0.0.1:8000/weather,1645440367,,200
+0c63b3,127.0.0.1,POST,http://127.0.0.1:8000/weather,1645440371,,302
+9c85e7,127.0.0.1,GET,http://127.0.0.1:8000/weather/toulouse,1645440372,,200
+251856,127.0.0.1,GET,http://127.0.0.1:8000/weather/toulouse,1645440416,,200
+6f285f,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1645440416,7af259,200
+7af259,127.0.0.1,GET,http://127.0.0.1:8000/favicon.ico,1645440416,,404
+e6ea57,127.0.0.1,POST,http://127.0.0.1:8000/weather/toulouse,1645440427,,302
+6c0625,127.0.0.1,GET,http://127.0.0.1:8000/weather/mazamet,1645440428,,200
+18e78b,127.0.0.1,POST,http://127.0.0.1:8000/weather/mazamet,1645440431,,302
+a0356c,127.0.0.1,GET,http://127.0.0.1:8000/weather/paris,1645440431,,200
